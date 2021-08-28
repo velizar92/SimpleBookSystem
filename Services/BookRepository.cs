@@ -6,11 +6,11 @@ using System.Linq;
 
 namespace BookSystem.Services
 {
-    public class BookService
+    public class BookRepository
     {
         private BookDbContext _context;
 
-        public BookService(BookDbContext context)
+        public BookRepository(BookDbContext context)
         {
             _context = context;
         }
@@ -23,7 +23,13 @@ namespace BookSystem.Services
         public Book GetBook(int id)
         {
             Book book = _context.Books.FirstOrDefault(b => b.Id == id);
-            return book;
+            if (book != null)
+            {
+                return book;
+            }
+
+            return null;
+            
         }
 
         public void CreateBook(Book book)
@@ -41,8 +47,11 @@ namespace BookSystem.Services
         public void DeleteBook(int id)
         {
             var bookToDelete = _context.Books.Find(id);
-            _context.Books.Remove(bookToDelete);
-            _context.SaveChanges();
+            if(bookToDelete != null)
+            {
+                _context.Books.Remove(bookToDelete);
+                _context.SaveChanges();
+            }  
         }
 
     }
