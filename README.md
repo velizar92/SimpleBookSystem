@@ -1,4 +1,4 @@
-![ProgramView](https://user-images.githubusercontent.com/40525254/132250977-678dee29-47ad-4ae9-888e-de468ebfc960.png)
+
 # SimpleBookSystem
 Simple Book System which implements CRUD operations. It is used EF Core ORM for working with MS SQL server. The project is just for simple demonstration of working with EF Core from console application.
 
@@ -7,3 +7,8 @@ one db context(BookDbContext.cs) and are implemented all CRUD operations.
 The program shows us simple console UI menu where we can see all possible functionalities.  
 
 Note: The project is not with fully safe code because of simplicity of the example! 
+
+![ProgramView](https://user-images.githubusercontent.com/40525254/132250977-678dee29-47ad-4ae9-888e-de468ebfc960.png)
+
+![GetBookView](https://user-images.githubusercontent.com/40525254/132251101-845321b3-3c4d-41d8-ab68-08ef2b2b1083.png)
+
