@@ -32,6 +32,7 @@ namespace BookSystem
         public void ShowBookInfo(Book book)
         {
             Console.WriteLine("=========================");
+            Console.WriteLine("Id =====> " + book.Id);         
             Console.WriteLine("Name =====> " + book.Name);
             Console.WriteLine("Description =====> " + book.Description);
             Console.WriteLine("Genre =====> " + book.Genre);
@@ -44,7 +45,7 @@ namespace BookSystem
         public Book UpdateBookInfo(Book book)
         {
             ShowBookInfo(book);
-            Console.WriteLine("Which property do you want to chage: ");
+            Console.WriteLine("Which property do you want to change: ");
             string property = Console.ReadLine();
             switch (property)
             {
