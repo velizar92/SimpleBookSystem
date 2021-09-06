@@ -1,3 +1,4 @@
+![ProgramView](https://user-images.githubusercontent.com/40525254/132250977-678dee29-47ad-4ae9-888e-de468ebfc960.png)
 # SimpleBookSystem
 Simple Book System which implements CRUD operations. It is used EF Core ORM for working with MS SQL server. The project is just for simple demonstration of working with EF Core from console application.
 
