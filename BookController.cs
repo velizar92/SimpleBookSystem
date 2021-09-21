@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BookSystem
 {
-    public class ConsoleBookHandler
+    public class BookController
     {
 
         public Book GetAllBookInfo()

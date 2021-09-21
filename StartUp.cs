@@ -9,7 +9,7 @@ namespace BookSystem
     public class StartUp
     {
 
-        public void Start(BookRepository _bookService, ConsoleBookHandler _bookHandler)
+        public void Start(BookRepository _bookService, BookController _bookController)
         {
             Book book = null;
 
@@ -31,7 +31,7 @@ namespace BookSystem
                 switch (optionNumber)
                 {
                     case 1:
-                        book = _bookHandler.GetAllBookInfo();
+                        book = _bookController.GetAllBookInfo();
                         _bookService.CreateBook(book);
                         Console.WriteLine("Book is created! ");
                         break;
@@ -44,7 +44,7 @@ namespace BookSystem
                             Console.WriteLine("There is no book with such id!");
                             break;
                         }
-                        _bookHandler.ShowBookInfo(book);
+                        _bookController.ShowBookInfo(book);
                         break;
                     case 3:
                         ICollection<Book> books = _bookService.GetBooks();
@@ -58,7 +58,7 @@ namespace BookSystem
                             Console.WriteLine("----------------All books:----------------");
                             foreach (var bookItem in books)
                             {
-                                _bookHandler.ShowBookInfo(bookItem);
+                                _bookController.ShowBookInfo(bookItem);
                             }
                         }
                         break;
@@ -66,7 +66,7 @@ namespace BookSystem
                         Console.WriteLine("Please type the book id of book that you want to update: ");
                         int bookId = int.Parse(Console.ReadLine());
                         book = _bookService.GetBook(bookId);
-                        book = _bookHandler.UpdateBookInfo(book);
+                        book = _bookController.UpdateBookInfo(book);
                         _bookService.UpdateBook(book, bookId);
                         Console.WriteLine("Book is updated! ");
                         break;

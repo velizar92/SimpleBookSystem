@@ -8,7 +8,7 @@ namespace BookSystem
     {
         static void Main(string[] args)
         {
-            ConsoleBookHandler bookHandler = new ConsoleBookHandler();
+            BookController bookHandler = new BookController();
             BookDbContext context = new BookDbContext();
             context.Database.EnsureCreated();
             BookRepository _bookService = new BookRepository(context);
